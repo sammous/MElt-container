@@ -11,13 +11,13 @@ This repository provides a way to contain in a docker container the tool MElt fo
 To build the image, run the following command :
 
 ``` 
-sudo docker build -t melt -f Dockerfile
+sudo docker build -t melt -f Dockerfile .
 ```
 
 To run a container :
 
 ```
-sudo docker run -d -p 5000:5000 -it melt
+sudo docker run --name melt -d -p 5000:5000 -it melt
 ```
 
 The listening will be by default 5000.
