@@ -48,6 +48,8 @@ To interact with the API, you need to `POST` your content in a `JSON` format.
 
 ## Tagset
 
+Tag table:
+
 ```
 ADJ 	   adjective
 ADJWH	   interrogative adjective
