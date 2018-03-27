@@ -26,7 +26,10 @@ The listening will be by default 5000.
 
 To test your setup, you can try to `POST` data.
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"data":"Il fait beau dehors. Mais Paris est trop petit pour pouvoir en profiter, et surtout trop cher"}' http://localhost:5000/pos_and_tokenize
+curl -H "Content-Type: application/json" \
+-X POST \
+-d '{"data":"Il fait beau dehors. Mais Paris est trop petit pour pouvoir en profiter, et surtout trop cher"}' \
+http://localhost:5000/pos_and_tokenize
 ```
 
 You should get the output :
