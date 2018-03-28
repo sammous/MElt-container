@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/pos', methods=['POST'])
 def pos():
     try:
-        json_data = request.json['data']
+        json_data = request.json['data'].encode('utf8')
         with NamedTemporaryFile(mode='r+w', delete=False) as f:
             path = f.name
             f.write(json_data)
@@ -25,7 +25,7 @@ def pos():
 @app.route('/lemma', methods=['POST'])
 def lemma():
     try:
-        json_data = request.json['data']
+        json_data = request.json['data'].encode('utf8')
         with NamedTemporaryFile(mode='r+w', delete=False) as f:
             path = f.name
             f.write(json_data)
@@ -40,7 +40,7 @@ def lemma():
 @app.route('/pos_and_tokenize', methods=['POST'])
 def pos_and_tokenize():
     try:
-        json_data = request.json['data']
+        json_data = request.json['data'].encode('utf8')
         with NamedTemporaryFile(mode='r+w', delete=False) as f:
             path = f.name
             f.write(json_data)
@@ -55,7 +55,7 @@ def pos_and_tokenize():
 @app.route('/tokenize', methods=['POST'])
 def tokenize():
     try:
-        json_data = request.json['data']
+        json_data = request.json['data'].encode('utf8')
         f = NamedTemporaryFile(delete=False)
         f.write(json_data)
         ps = subprocess.Popen(('cat', f.name), stdout=subprocess.PIPE)
