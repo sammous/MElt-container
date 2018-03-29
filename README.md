@@ -24,12 +24,21 @@ The listening will be by default 5000.
 
 ## Testing
 
-To test your setup, you can try to `POST` data.
+To test your setup, you can try to `POST` data directly via CLI.
 ```
 curl -H "Content-Type: application/json" \
 -X POST \
 -d '{"data":"Il fait beau dehors. Mais Paris est trop petit pour pouvoir en profiter, et surtout trop cher"}' \
 http://localhost:5000/pos_and_tokenize
+```
+
+Or via the library `requests` :
+
+```python
+r = requests.post('http://localhost:5000/pos_and_tokenize',
+json={'data': "Il fait beau dehors. Mais Paris est trop petit pour pouvoir en profiter, et surtout trop cher"},
+headers={'Content-Type':'application/json', 'charset': 'utf-8'})
+print(r.content)
 ```
 
 You should get the output :
