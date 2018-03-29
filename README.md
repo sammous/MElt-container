@@ -95,4 +95,5 @@ VS	   subjunctive verb form
 ```
 
 ## Credits
+
 - Sagot Benoît et Fišer Darja (2008). Building a free French wordnet from multilingual resources. In Ontolex 2008, Marrakech, Maroc
