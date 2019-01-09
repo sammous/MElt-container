@@ -1,8 +1,8 @@
 FROM ubuntu:14.04
 MAINTAINER Sami Moustachir <moustachir.sami@gmail.com>
 
-ENV https_proxy=http://10.244.16.9:9090
-ENV http_proxy=http://10.244.16.9:9090
+#ENV https_proxy=
+#ENV http_proxy=
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
